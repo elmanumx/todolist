@@ -1,0 +1,23 @@
+<div class="col s12  m12   l12" align="center">
+    <div class="input-field col m6 s8 offset-m3 offset-s2">
+        <input id="icon_prefix" type="text" class="validate" ng-model = "buscar">
+        <label for="icon_prefix">Buscar</label>
+    </div>
+</div>
+<div class="col s12  m12   l12" align="center" ng-show="actividades == ''">
+    <h3>Sin Actividades!</h3>
+</div>
+<div class="col s12  m12   l12" align="left" ng-show="actividades != ''">
+	  <ul class="collection with-header">
+        <li class="collection-header"><h4>Tareas</h4></li>
+        <li class="collection-item" ng-repeat ="actividad in actividades" ng-show = "actividad.titulo.search(buscar) > -1 || buscar == ''">
+        	<div>
+        		<h5>{{actividad.titulo}} - <small>{{actividad.fecha}}</small></h5>
+                <span>{{actividad.descripcion}}</span>
+        		<a  href="#!" ng-click = "deleteItem(actividad)" class="secondary-content"><i class="mdi-navigation-cancel small"></i></a>
+        		<a href="#/edit/list/{{actividad}}" class="secondary-content"><i class="mdi-action-settings small"></i></a>
+        	</div>
+        </li>
+      </ul>
+</div>
+

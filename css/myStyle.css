@@ -1,0 +1,30 @@
+main {
+	margin-left: 10px;
+}
+.title{
+	margin-left: 35px;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.exp{
+width: 100%;
+}
+ .card .card-action a {
+ 	color: none;
+ }
+
+.rotate{
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+}

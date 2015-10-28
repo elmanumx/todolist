@@ -1,0 +1,24 @@
+<div class="col s12  m12   l12">
+  <form ng-submit="addActividad()">
+     <div class="row">
+     <h3>Actividad!</h3>
+       <div class="input-field col s12">
+         <input id="titulo" type="text" class="validate" ng-model="newActividad.titulo">
+         <label for="titulo">Titulo!</label>
+       </div>
+        <div class="input-field col s12">
+          <textarea id="descripcion" class="materialize-textarea" ng-model="newActividad.descripcion"></textarea>
+          <label for="descripcion">Descripción :</label>
+        </div>
+      </div>
+      <div class="input-field col s12">
+                      <input type="date"  class="datepicker" ng-model="newActividad.fecha">
+                      <label for="last_name" class="">Fecha</label>
+                  </div>
+      <div class="col s12  m12   l12">
+         <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+            <i class="mdi-content-send right"></i>
+         </button>
+      </div>
+  </form>
+</div>
